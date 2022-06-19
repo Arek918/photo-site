@@ -1,0 +1,206 @@
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.section-heading {
+	position: relative;
+	font-size: 4rem;
+	padding-bottom: 1em;
+	text-transform: uppercase;
+	text-align: center;
+	color: rgb(181, 41, 177);
+	font-family: 'Courgette', cursive;
+	font-weight: 300;
+
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 40%;
+		height: 10px;
+		background-color: rgb(181, 41, 177);
+		bottom: 15%;
+		left: 30.5%;
+		border-radius: 8px;
+	}
+
+
+
+}
+
+.section-padding {
+	padding: 4.5em 2em;
+}
+
+//////   SLIDER    ///////
+
+.slider,
+.slider > div {
+	/* Images default to Center Center. Maybe try 'center top'? */
+	background-position: center center;
+	display: block;
+	width: 100%;
+	height: 500px;
+	/* height: 100vh; */ /* If you want fullscreen */
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #000;
+	overflow: hidden;
+	-moz-transition: transform 0.4s;
+	-o-transition: transform 0.4s;
+	-webkit-transition: transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.slider > div {
+	position: absolute;
+}
+
+.slider > i {
+	color: #5bbd72;
+	position: absolute;
+	font-size: 60px;
+	margin: 20px;
+	top: 40%;
+	text-shadow: 0 10px 2px #223422;
+	transition: 0.3s;
+	width: 30px;
+	padding: 10px 13px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
+	line-height: 0;
+	box-sizing: content-box;
+	border-radius: 3px;
+	z-index: 4;
+}
+
+.slider > i svg {
+	margin-top: 3px;
+}
+
+.slider > .left {
+	left: 0px;
+}
+.slider > .right {
+	right: 0px;
+}
+.slider:hover > .left {
+	left: 0;
+}
+.slider:hover > .right {
+	right: 0;
+}
+
+.slider > i:hover {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	transform: translateX(-2px);
+}
+
+.slider > i.right:hover {
+	transform: translateX(2px);
+}
+
+.slider > i.right:active,
+.slider > i.left:active {
+	transform: translateY(1px);
+}
+
+.slider:hover > div {
+	transform: scale(1.01);
+}
+
+.slider > ul > .showli {
+	background-color: #7ec03d;
+	-moz-animation: boing 0.5s forwards;
+	-o-animation: boing 0.5s forwards;
+	-webkit-animation: boing 0.5s forwards;
+	animation: boing 0.5s forwards;
+}
+
+.slider > ul > li:hover {
+	background-color: #7ec03d;
+}
+
+.slider > .show {
+	z-index: 1;
+}
+
+.hideDots > ul {
+	display: none;
+}
+
+.showArrows > .left {
+	left: 0;
+}
+
+.showArrows > .right {
+	right: 0;
+}
+
+.slider > div span {
+	display: flex;
+	background: rgba(26, 24, 25, 0.875);
+	position: absolute;
+	bottom: 0;
+	font-family: 'Courgette', cursive;
+	color: rgba(204, 106, 191, 0.907);
+	justify-content: center;
+    align-items: center;
+	padding: 0;
+	width: 100%;
+	height: 10%;
+    font-size: 1.4rem;
+    
+   a {
+       text-decoration: none;
+	color: rgba(204, 106, 191, 0.907);
+      
+
+    &:hover {
+	color: royalblue;
+
+    }
+   }
+
+
+
+    
+}
+
+
+
+/* -------------------------------------- */
+
+.content {
+	padding: 50px;
+	margin-bottom: 100px;
+	padding: 10px 15vw;
+}
+
+@media (min-width: 768px) {
+	.section-heading {
+		font-size: 4.8rem;
+	}
+
+
+
+    ///// SLIDER ////// 
+
+    .slider > .left {
+        left: -100px;
+    }
+    .slider > .right {
+        right: -100px;
+    }
+
+
+    .slider > div span {
+     font-size: 2rem;
+    }
+    
+}
